@@ -46,7 +46,7 @@ module Acl9
     private
 
     def version_for_migration
-      version =  self.class.current_version
+      version =  ActiveRecord::Migration.current_version
       return if version < 5
       "[#{version}]"
     end
