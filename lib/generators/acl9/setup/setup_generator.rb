@@ -44,6 +44,13 @@ module Acl9
     end
 
     private
+
+    def version_for_migration
+      version =  self.class.current_version
+      return if version < 5
+      "[#{version}]"
+    end
+
     def role_name
       arg_role.underscore.singularize
     end
