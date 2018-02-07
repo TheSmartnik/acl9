@@ -1,4 +1,4 @@
-class Create<%= role_class_name %>Tables < ActiveRecord::Migration<%=version_for_migration%>
+class Create<%= role_class_name %>Tables < ActiveRecord::Migration<%=ActiveRecord::Migration.version_for_migration%>
   def change
     create_table :<%= role_table_name %> do |t|
       t.string   :name,                   null: false
